@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.8.26)  26 DEC 2021 16:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.8.26)  27 DEC 2021 00:03
 entering extended mode
 **./ude_proj.tex
 (ude_proj.tex
@@ -1410,7 +1410,67 @@ oc) [2
 
 ] [8
 
-] [9
+]
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+88.
+
+("C:\Users\vladt\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmss.fd"
+File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
+8.
+
+("C:\Users\vladt\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+88.
+
+("C:\Users\vladt\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+88.
+
+("C:\Users\vladt\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 88.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 88.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 88.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 88.
+
+
+("C:\Users\vladt\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
+
+("C:\Users\vladt\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 88.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 88.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 88.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
+8.
+("C:\Users\vladt\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 88.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <7> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 88.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <5> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 88.
+
+[9
 
 ] [10
 
@@ -1422,8 +1482,8 @@ oc) [2
 
 ] [14
 
-]
-(ude_proj.toc) [15
+] (ude_proj.toc)
+[15
 
 ] [16
 
@@ -1455,11 +1515,11 @@ Package rerunfilecheck Info: File `ude_proj.out' has not changed.
 (rerunfilecheck)             Checksum: FECDD94BE77FB2FCD8E270CA694FF4FB;2486.
  ) 
 Here is how much of TeX's memory you used:
- 22348 strings out of 479616
- 413014 string characters out of 2863065
- 696335 words of memory out of 3000000
- 38965 multiletter control sequences out of 15000+200000
- 411326 words of font info for 35 fonts, out of 3000000 for 9000
+ 22505 strings out of 479616
+ 416340 string characters out of 2863065
+ 696332 words of memory out of 3000000
+ 39073 multiletter control sequences out of 15000+200000
+ 456082 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,15n,132p,415b,761s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\vladt\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\la
@@ -1468,7 +1528,7 @@ pi600\larm0500.pk> <C:\Users\vladt\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/
 lh-t2a/dpi600\larm0700.pk> <C:\Users\vladt\AppData\Local\MiKTeX\2.9\fonts/pk/lj
 four/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\vladt\AppData\Local\MiKTeX\2.9\fon
 ts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk>
-Output written on ude_proj.pdf (21 pages, 129982 bytes).
+Output written on ude_proj.pdf (21 pages, 130259 bytes).
 PDF statistics:
  522 PDF objects out of 1000 (max. 8388607)
  54 named destinations out of 1000 (max. 500000)
