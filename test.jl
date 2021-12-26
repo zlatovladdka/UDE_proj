@@ -139,14 +139,14 @@ tspan = (0.0f0,1.5f0)
 
 function trueODEfunc(du,u,p,t)
     true_A = [-0.1 2.0; -2.0 -0.1]
-    du .= ((u.^3)'true_A)'
+    du .= ((sin.(u))'true_A)'
 end
 t = range(tspan[1],tspan[2],length=datasize)
 prob = ODEProblem(trueODEfunc,u0,tspan)
 ode_data = Array(solve(prob,Tsit5(),saveat=t))
 
-dudt = Chain(x -> x.^3,
-             Dense(2,50,tanh),
+dudt = Chain(Dense(2,50,tanh),
+             Dense(50,50,tanh),
              Dense(50,2))
 n_ode = NeuralODE(dudt,tspan,Tsit5(),saveat=t,reltol=1e-7,abstol=1e-9)
 ps = Flux.params(n_ode)
@@ -162,8 +162,8 @@ loss_n_ode() = sum(abs2,ode_data .- predict_n_ode())
 
 loss_n_ode()
 
-data = Iterators.repeated((), 1000)
-opt = ADAM(0.1)
+data = Iterators.repeated((), 300)
+opt = ADAM(0.05)
 cb_n = function ()
   display(loss_n_ode())
   cur_pred = predict_n_ode()

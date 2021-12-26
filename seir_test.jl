@@ -164,5 +164,73 @@ loss(res2_uode.minimizer)
 
 prob_nn2 = ODEProblem(dudt_,u0, tspan, res2_uode.minimizer)
 uode_sol = solve(prob_nn2, Tsit5(), saveat = 1)
-plot(solution, vars=[2,3,4])
-plot!(uode_sol, vars=[2,3,4])
+scatter(solution, vars=[2,3,4], label="Real solution")
+plot!(uode_sol, vars=[2,3,4], label="UODE prediction")
+
+savefig("uode_prediction_train.png")
+savefig("uode_prediction_train.pdf")
+
+plot(losses, yaxis = :log, xaxis = :log, xlabel = "Iterations", ylabel = "Loss")
+
+# Collect the state trajectory and the derivatives
+X = noisy_data
+# Ideal derivatives
+DX = Array(solution(solution.t, Val{1}))
+
+prob_nn2 = ODEProblem(dudt_,u0, tspan2, res2_uode.minimizer)
+_sol_uode = solve(prob_nn2, Vern7(), abstol=1e-12, reltol=1e-12, saveat = 1)
+p_uode = scatter(solution_extrapolate, vars=[2,3,4], legend = :topleft, label=["True Exposed" "True Infected" "True Recovered"], title="Universal ODE Extrapolation")
+plot!(p_uode,_sol_uode, lw = 5, vars=[2,3,4], label=["Estimated Exposed" "Estimated Infected" "Estimated Recovered"])
+plot!(p_uode,[20.99,21.01],[0.0,maximum(hcat(Array(solution_extrapolate[2:4,:]),Array(_sol_uode[2:4,:])))],lw=5,color=:black,label="Training Data End")
+
+savefig("universalode_extrapolation.png")
+savefig("universalode_extrapolation.pdf")
+
+### Universal ODE Part 2: SInDy to Equations
+
+# Create a Basis
+@variables u[1:3]
+# Lots of polynomials
+polys = []
+for i ∈ 0:2, j ∈ 0:2, k ∈ 0:2
+    push!(polys, u[1]^i * u[2]^j * u[3]^k)
+end
+
+polys
+
+# And some other stuff
+h = [cos.(u)...; sin.(u)...; unique(polys)...]
+basis = Basis(h, u)
+
+X = noisy_data
+# Ideal derivatives
+DX = Array(solution(solution.t, Val{1}))
+S,E,I,R,N,D,C = eachrow(X)
+F,β0,α,κ,μ,_,γ,d,λ = p_
+L = β.(0:tspan[end],β0,D,N,κ,α).*S.*I./N
+L̂ = vec(ann([S./N I D./N]',res2_uode.minimizer))
+X̂ = [S./N I D./N]'
+
+scatter(L,title="Estimated vs Expected Exposure Term",label="True Exposure")
+plot!(L̂,label="Estimated Exposure")
+savefig("uode_estimated_exposure.png")
+savefig("uode_estimated_exposure.pdf")
+
+# Create an optimizer for the SINDY problem
+opt = DataDrivenDiffEq.Optimize.STLSQ()
+# Create the thresholds which should be used in the search process
+thresholds = exp10.(-6:0.1:1)
+
+# Test on original data and without further knowledge
+problem = ContinuousDataDrivenProblem(X[2:4, :], DX[2:4, :])
+Ψ_direct = solve(problem, basis, opt, maxiter = 50000) # Fail
+println(Ψ_direct.basis)
+
+problem_ideal = ContinuousDataDrivenProblem(X[2:4, 5:end], L[5:end])
+Ψ_ideal = solve(problem_ideal, basis, opt, maxiter = 50000) # Succeed
+println(Ψ_ideal.basis)
+
+
+# Test on uode derivative data
+Ψ = SInDy(X̂[:, 2:end], L̂[2:end], basis, thresholds,  opt = opt, maxiter = 10000, normalize = true, denoise = true) # Succeed
+println(Ψ.basis)
