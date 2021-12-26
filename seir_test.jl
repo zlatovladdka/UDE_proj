@@ -211,10 +211,17 @@ L = β.(0:tspan[end],β0,D,N,κ,α).*S.*I./N
 L̂ = vec(ann([S./N I D./N]',res2_uode.minimizer))
 X̂ = [S./N I D./N]'
 
+corona!(DX, X, p_, solution.t)
+DX
+
+
 scatter(L,title="Estimated vs Expected Exposure Term",label="True Exposure")
 plot!(L̂,label="Estimated Exposure")
 savefig("uode_estimated_exposure.png")
 savefig("uode_estimated_exposure.pdf")
+
+
+
 
 # Create an optimizer for the SINDY problem
 opt = DataDrivenDiffEq.Optimize.STLSQ()
@@ -222,15 +229,57 @@ opt = DataDrivenDiffEq.Optimize.STLSQ()
 thresholds = exp10.(-6:0.1:1)
 
 # Test on original data and without further knowledge
-problem = ContinuousDataDrivenProblem(X[2:4, :], DX[2:4, :])
-Ψ_direct = solve(problem, basis, opt, maxiter = 50000) # Fail
+problem = ContinuousDataDrivenProblem(X[2:4, :],DX[2:4, :])
+Ψ_direct = DiffEqBase.solve(problem, basis, STLSQ(), maxiter = 50000) # Fail
 println(Ψ_direct.basis)
+println(Ψ_direct.parameters)
 
-problem_ideal = ContinuousDataDrivenProblem(X[2:4, 5:end], L[5:end])
-Ψ_ideal = solve(problem_ideal, basis, opt, maxiter = 50000) # Succeed
+
+# тут код с X и L: определяем проблему с правой частью
+# на тот самый подгоняемый член и делаем СИНДи
+# возможно придётся добавить функции для выполнения СИНДи, а то че-то
+# местные не робят....
+
+problem_direct = DirectDataDrivenProblem(X[2:4, :],DX[2:4, :])
+Ψ_direct = solve(problem_direct, basis, STLSQ(), maxiter = 50000)
+println(Ψ_direct.basis)
+println(Ψ_direct.parameters)
+
+problem_ideal = DirectDataDrivenProblem(X[2:4, 5:end],L[5:end])
+Ψ_ideal = solve(problem_ideal, basis, STLSQ(), maxiter = 50000)
 println(Ψ_ideal.basis)
+println(Ψ_ideal.parameters)
+
+problem = DirectDataDrivenProblem(X[2:4, :],L̂[5:])
+Ψ = solve(problem, basis, STLSQ(), maxiter = 50000)
+println(Ψ_ideal.basis)
+println(Ψ_ideal.parameters)
 
 
-# Test on uode derivative data
-Ψ = SInDy(X̂[:, 2:end], L̂[2:end], basis, thresholds,  opt = opt, maxiter = 10000, normalize = true, denoise = true) # Succeed
-println(Ψ.basis)
+
+## Build a ODE for the estimated system
+function approx(u,p,t)
+    S,E,I,R,N,D,C = u
+    F, β0,α,κ,μ,σ,γ,d,λ = p_
+    z = Ψ([S/N,I,D/N]) # Exposure does not depend on exposed, removed, or cumulative!
+    dS = -β0*S*F/N - z[1] -μ*S # susceptible
+    dE = β0*S*F/N + z[1] -(σ+μ)*E # exposed
+    dI = σ*E - (γ+μ)*I # infected
+    dR = γ*I - μ*R # removed (recovered + dead)
+    dN = -μ*N # total population
+    dD = d*γ*I - λ*D # severe, critical cases, and deaths
+    dC = σ*E # +cumulative cases
+
+    [dS,dE,dI,dR,dN,dD,dC]
+end
+
+# Create the approximated problem and solution
+a_prob = ODEProblem{false}(approx, u0, tspan2, p_)
+a_solution = solve(a_prob, Tsit5())
+
+p_uodesindy = scatter(solution_extrapolate, vars=[2,3,4], legend = :topleft, label=["True Exposed" "True Infected" "True Recovered"])
+plot!(p_uodesindy,a_solution, lw = 5, vars=[2,3,4], label=["Estimated Exposed" "Estimated Infected" "Estimated Recovered"])
+plot!(p_uodesindy,[20.99,21.01],[0.0,maximum(hcat(Array(solution_extrapolate[2:4,:]),Array(_sol_uode[2:4,:])))],lw=5,color=:black,label="Training Data End")
+
+savefig("universalodesindy_extrapolation.png")
+savefig("universalodesindy_extrapolation.pdf")
