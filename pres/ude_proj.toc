@@ -1,1 +1,11 @@
 \babel@toc {russian}{}
+\beamer@sectionintoc {1}{Подходы для описания мира}{7}{0}{1}
+\beamer@subsectionintoc {1}{1}{Физические модели}{9}{0}{1}
+\beamer@subsectionintoc {1}{2}{Большие данные}{10}{0}{1}
+\beamer@sectionintoc {2}{Комбинирование двух подходов}{11}{0}{2}
+\beamer@sectionintoc {3}{Универсальные дифференциальные уравнения}{13}{0}{3}
+\beamer@sectionintoc {4}{Вспомогательные инструменты}{15}{0}{4}
+\beamer@subsectionintoc {4}{1}{алгортим SINDy}{16}{0}{4}
+\beamer@sectionintoc {5}{Примеры применения UDE}{17}{0}{5}
+\beamer@subsectionintoc {5}{1}{Модифицированная модель SEIR}{19}{0}{5}
+\beamer@subsectionintoc {5}{2}{Модель Лотки-Вольтерра}{20}{0}{5}

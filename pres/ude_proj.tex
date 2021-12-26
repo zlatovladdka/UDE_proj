@@ -22,11 +22,29 @@
 % цветовая схема
 \usecolortheme{whale}
 
-\title{Универсальные дифференциальные уравнения}   
+\title[UDE]{Универсальные дифференциальные уравнения}   
 \subtitle{Комбинация лучших сторон разных подходов.}
-\author{Влад Темкин БФЗ191} 
-\date{\today} 
+\author{Влад Темкин} 
 
+
+
+\institute[HSE] % (optional)
+{
+	Высшая Школа Экономики\\
+	Факультет Физики
+}
+
+\date[\today]
+{Стохастические процессы и моделирование}
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{План доклада}
+		\framesubtitle{Основные моменты}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
 
 \begin{document}
 	
@@ -34,19 +52,103 @@
 		\titlepage
 	\end{frame} 
 	
+	
 	\begin{frame}
-		\frametitle{План выступления} 
+		\frametitle{План доклада} 
 		\framesubtitle{Основные моменты}
-			\begin{itemize}
-				\item подходы для описания мира
-				\begin{itemize}
-					\item физические модели
-					\item большие данные
-				\end{itemize}
-				\item как можно объединить подхода
-				\item универсальные дифференциальные уравнения
-				\item 
-			\end{itemize}
+		\tableofcontents[pausesections]
 	\end{frame}
+
+
+	\section{Подходы для описания мира}
+	
+		\begin{frame}
+			\frametitle{Подходы для описания мира} 
+				всем привет
+		\end{frame}
+	
+	
+		\subsection{Физические модели}
+		
+			\begin{frame}
+				\frametitle{Подходы для описания мира} 
+				\framesubtitle{Физические модели}
+					тут про физику в виде диффуров
+			\end{frame}
+		
+		
+		\subsection{Большие данные}
+		
+			\begin{frame}
+				\frametitle{Подходы для описания мира} 
+				\framesubtitle{Большие данные}
+					тут про нейронки и мл
+			\end{frame}
+			
+			
+	\section{Комбинирование двух подходов}
+		
+		\begin{frame}
+			\frametitle{Комбинирование двух подходов} 
+			\framesubtitle{Различные практики}
+				тут про нейронные диффуры 
+		\end{frame}
+		
+		
+	\section{Универсальные дифференциальные уравнения}
+	
+		\begin{frame}
+			\frametitle{Универсальные дифференциальные уравнения} 
+			\framesubtitle{Выделенный случай}
+				диффур, заменяем слагаемое на нейронку 
+		\end{frame}
+	
+	
+	\section{Вспомогательные инструменты}
+	
+		\subsection{алгортим SINDy}
+		
+			\begin{frame}
+				\frametitle{Вспомогательные инструменты} 
+				\framesubtitle{Алгоритм SINDy}
+					тут пару слов о том как робит синди  
+			\end{frame}
+		
+		
+	\section{Примеры применения UDE}
+	
+		\begin{frame}
+			\frametitle{Примеры применения UDE} 
+				задачи бывают всякие разные  
+		\end{frame}
+	
+		
+		\subsection{Модифицированная модель SEIR}
+		
+			\begin{frame}
+				\frametitle{Примеры применения UDE} 
+				\framesubtitle{Модифицированная модель SEIR}
+					история о том как я код пиздил  
+			\end{frame}
+			
+			
+		\subsection{Модель Лотки-Вольтерра}
+			
+			\begin{frame}
+				\frametitle{Примеры применения UDE} 
+				\framesubtitle{Модель Лотки-Вольтерра}
+					история о том как я код пиздил  во второй раз
+			\end{frame}
+		
+		
+	\section*{Литература}
+	
+		\begin{frame}
+			\frametitle{Список литературы} 
+				\begin{itemize}
+					\item
+				\end{itemize}
+			
+		\end{frame}
 
 \end{document}
