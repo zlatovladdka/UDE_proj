@@ -1,5 +1,5 @@
 cd(@__DIR__)
-using Pkg; Pkg.activate("."); Pkg.instantiate()
+using Pkg; Pkg.activate(".");Pkg.instantiate()
 
 # Single experiment, move to ensemble further on
 # Some good parameter values are stored as comments right now

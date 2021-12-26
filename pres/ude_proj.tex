@@ -60,48 +60,59 @@
 	\end{frame}
 
 
-	\section{Подходы для описания мира}
-	
-		\begin{frame}
-			\frametitle{Подходы для описания мира} 
-				всем привет
-		\end{frame}
-	
+	\section{Подходы к описанию мира}
 	
 		\subsection{Физические модели}
 		
 			\begin{frame}
-				\frametitle{Подходы для описания мира} 
+				\frametitle{Подходы к описанию мира} 
 				\framesubtitle{Физические модели}
 					\begin{columns}
 						\column{0.5\linewidth}
 						\begin{center}
 							\begin{itemize}
-								\item
-								\item
-								\item
+								\item хорошо интерполируют (очень хорошо)
+								\item легко интерпретировать 
+								\item указывают на структуру процесса
+								\item нужно понимать хоть что-то о мире
+								\item проигрывают другим моделям (а именно машинному обучению), когда речь идёт о предсказаниях просто из набора данных
 							\end{itemize}
 						\end{center}
 						\column{0.5\linewidth}
-						я начал презу
+							\begin{displaymath}
+								\frac{d}{dt}\frac{\partial L}{\partial \dot{x}} - \frac{\partial L}{\partial x} = 0
+							\end{displaymath}
+							\newline
+							\begin{displaymath}
+								\left\{\begin{gathered}
+									\nabla \cdot \vec{D} = 4\pi	\rho\\
+									\nabla \cdot \vec{B} = 0 \\
+									\nabla \times \vec{E} = \frac{1}{c}\frac{\partial \vec{B}}{\partial t} \\
+									\nabla \times \vec{H} = \frac{4\pi}{c}\vec{j} + \frac{1}{c}\frac{\partial \vec{D}}{\partial t}
+								\end{gathered}\right.
+							\end{displaymath}
 					\end{columns}
 			\end{frame}
 		
 		
-		\subsection{Большие данные}
+		\subsection{Машинное обучение}
 		
 			\begin{frame}
-				\frametitle{Подходы для описания мира} 
-				\framesubtitle{Большие данные}
+				\frametitle{Подходы к описанию мира} 
+				\framesubtitle{Машинное обучение}
 					\begin{columns}
 						\column{0.5\linewidth}
-						второй слайд
+							\includegraphics[width=\linewidth]{alphago.png}
+							\includegraphics[width=\linewidth]{mnist.png}
 						\column{0.5\linewidth}
 						\begin{center}
 							\begin{itemize}
-								\item
-								\item
-								\item
+								\item может решить почти любую задачу
+								\item превосходит человека во многих областях
+								\item потенциал кажется безграничным (обучение с подкреплением)
+								\item сложно интерпретировать
+								\item не всегда хорошо интерполирует  
+								\item требуется много данных
 							\end{itemize}
 						\end{center}
 					\end{columns}
@@ -113,7 +124,9 @@
 		\begin{frame}
 			\frametitle{Комбинирование двух подходов} 
 			\framesubtitle{Различные практики}
-				тут про нейронные диффуры 
+				\begin{block}{Универсальная теорема аппроксимации}
+					Нейронная сеть может аппроксимировать любую непрерывную функцию $R^n \to R^m$ с любой заданной точностью.
+				\end{block}  
 		\end{frame}
 		
 		

@@ -91,7 +91,7 @@ callback(θ,l,pred) = begin
     false
 end
 
-res1_node = DiffEqFlux.sciml_train(loss, p, ADAM(0.1), cb=callback, maxiters = 500)
+res1_node = DiffEqFlux.sciml_train(loss, p, ADAM(0.01), cb=callback, maxiters = 500)
 res2_node = DiffEqFlux.sciml_train(loss, res1_node.minimizer, BFGS(initial_stepnorm=0.01), cb=callback, maxiters = 10000)
 
 losses
@@ -106,12 +106,12 @@ plot(losses, yaxis = :log, xaxis = :log, xlabel = "Iterations", ylabel = "Loss")
 
 prob_node_extrapolate = ODEProblem(dudt_node,u0, tspan2, res2_node.minimizer)
 _sol_node = solve(prob_node_extrapolate, Vern7(), abstol=1e-12, reltol=1e-12, saveat = 1)
-p_node = scatter(solution_extrapolate, vars=[2,3,4], legend = :topleft, label=["True Exposed" "True Infected" "True Recovered"], title="Neural ODE Extrapolation")
-plot!(p_node,_sol_node, lw=5, vars=[2,3,4], label=["Estimated Exposed" "Estimated Infected" "Estimated Recovered"])
-plot!(p_node,[20.99,21.01],[0.0,maximum(hcat(Array(solution_extrapolate[2:4,:]),Array(_sol_node[2:4,:])))],lw=5,color=:black,label="Training Data End")
+p_node = scatter(solution_extrapolate, vars=[2,3,4], legend = :topleft, label=["Данные: Exposed" "Данные: Infected" "Данные: Recovered"], title="Экстраполяция Neural ODE")
+plot!(p_node,_sol_node, lw=5, vars=[2,3,4], label=["Нейронная сеть: Exposed" "Нейронная сеть: Infected" "Нейронная сеть: Recovered"])
+plot!(p_node,[20.99,21.01],[0.0,maximum(hcat(Array(solution_extrapolate[2:4,:]),Array(_sol_node[2:4,:])))],lw=5,color=:black,label="Граница тренировочных данных")
 
-savefig("neuralode_extrapolation.png")
-savefig("neuralode_extrapolation.pdf")
+savefig("repos\\UDE_proj\\pres\\neuralode_extrapolation.png")
+# savefig("neuralode_extrapolation.pdf")
 
 
 ### Universal ODE Part 1
@@ -164,19 +164,21 @@ callback(θ,l,pred) = begin
 end
 
 res1_uode = DiffEqFlux.sciml_train(loss, p, ADAM(0.01), cb=callback, maxiters = 500)
-res2_uode = DiffEqFlux.sciml_train(loss, res1_uode.minimizer, BFGS(initial_stepnorm=0.01), cb=callback, maxiters = 10000)
+res2_uode = DiffEqFlux.sciml_train(loss, res1_uode.minimizer, BFGS(initial_stepnorm=0.01), cb=callback, maxiters = 1000)
+res2_uode = DiffEqFlux.sciml_train(loss, res2_uode.minimizer, BFGS(initial_stepnorm=0.01), cb=callback, maxiters = 1000)
+
 
 loss(res2_uode.minimizer)
 
 prob_nn2 = ODEProblem(dudt_,u0, tspan, res2_uode.minimizer)
 uode_sol = solve(prob_nn2, Tsit5(), saveat = 1)
-scatter(solution, vars=[2,3,4], label="Real solution")
-plot!(uode_sol, vars=[2,3,4], label="UODE prediction")
+scatter(solution, vars=[2,3,4], label="Данные")
+plot!(uode_sol, vars=[2,3,4], label="Предсказание UODE")
 
-savefig("uode_prediction_train.png")
-savefig("uode_prediction_train.pdf")
+savefig("repos\\UDE_proj\\pres\\uode_prediction_train.png")
+# savefig("uode_prediction_train.pdf")
 
-plot(losses, yaxis = :log, xaxis = :log, xlabel = "Iterations", ylabel = "Loss")
+plot(losses, yaxis = :log, xaxis = :log, xlabel = "Итерации", ylabel = "Потери")
 
 # Collect the state trajectory and the derivatives
 X = noisy_data
