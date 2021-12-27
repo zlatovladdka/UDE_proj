@@ -186,6 +186,8 @@ estimate = solve(estimation_prob, Tsit5(), saveat = t)
 plot(estimate)
 
 
+## фит параметров
+
 prob = ODEProblem(recovered_dynamics!, Xₙ[:, 1], tspan, p_model)
 sol_d = solve(prob,p=p_model)
 plot(sol_d)
@@ -217,7 +219,8 @@ Flux.train!(loss_func, [p_model], data, opt, cb = cb_func)
 
 p_fitted = p_model
 
-##
+## фит параметров: другая версия
+
 function loss_fit(θ)
     X̂ = Array(solve(estimation_prob, Tsit5(), p = θ, saveat = t))
     sum(abs2, X̂ .- Xₙ)
@@ -226,7 +229,6 @@ end
 callback(θ,args...) = begin
 	l = loss_fit(θ)
     println("Current loss $l")
-	# println("training")
     false
 end
 
