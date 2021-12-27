@@ -179,7 +179,7 @@ savefig("repos\\UDE_proj\\pres\\uode_prediction_train.png")
 # savefig("uode_prediction_train.pdf")
 
 plot(losses, yaxis = :log, xaxis = :log, xlabel = "Итерации", ylabel = "Потери")
-
+savefig("repos\\UDE_proj\\pres\\uode_loss.png")
 # Collect the state trajectory and the derivatives
 X = noisy_data
 # Ideal derivatives
@@ -187,12 +187,12 @@ DX = Array(solution(solution.t, Val{1}))
 
 prob_nn2 = ODEProblem(dudt_,u0, tspan2, res2_uode.minimizer)
 _sol_uode = solve(prob_nn2, Vern7(), abstol=1e-12, reltol=1e-12, saveat = 1)
-p_uode = scatter(solution_extrapolate, vars=[2,3,4], legend = :topleft, label=["True Exposed" "True Infected" "True Recovered"], title="Universal ODE Extrapolation")
-plot!(p_uode,_sol_uode, lw = 5, vars=[2,3,4], label=["Estimated Exposed" "Estimated Infected" "Estimated Recovered"])
-plot!(p_uode,[20.99,21.01],[0.0,maximum(hcat(Array(solution_extrapolate[2:4,:]),Array(_sol_uode[2:4,:])))],lw=5,color=:black,label="Training Data End")
+p_uode = scatter(solution_extrapolate, vars=[2,3,4], legend = :topleft, label=["Данные: Exposed" "Данные: Infected" "Данные: Recovered"], title="Экстраполяция Universal ODE")
+plot!(p_uode,_sol_uode, lw = 5, vars=[2,3,4], label=["UODE: Exposed" "UODE: Infected" "UODE: Recovered"])
+plot!(p_uode,[20.99,21.01],[0.0,maximum(hcat(Array(solution_extrapolate[2:4,:]),Array(_sol_uode[2:4,:])))],lw=5,color=:black,label="Граница тренировочных данных")
 
-savefig("universalode_extrapolation.png")
-savefig("universalode_extrapolation.pdf")
+savefig("repos\\UDE_proj\\pres\\universalode_extrapolation.png")
+# savefig("universalode_extrapolation.pdf")
 
 ### Universal ODE Part 2: SInDy to Equations
 
@@ -227,13 +227,16 @@ F,β0,α,κ,μ,_,γ,d,λ = p_
 L_ext = β.(0:tspan2[end],β0,D,N,κ,α).*S.*i./N
 
 
-scatter(L,title="Estimated vs Expected Exposure Term",label="True Exposure")
-plot!(L̂,label="Estimated Exposure")
-savefig("uode_estimated_exposure.png")
-savefig("uode_estimated_exposure.pdf")
+scatter(L,title="UODE vs Исходная функция в системе",label="Исходное слагаемое")
+plot!(L̂,label="Предсказание UODE")
+
+savefig("repos\\UDE_proj\\pres\\uode_estimated_exposure.png")
+# savefig("uode_estimated_exposure.pdf")
 
 
 
+
+#### NOTE: реализовать то, что находится ниже, у меня пока что не удалось до конца
 
 # Create the thresholds which should be used in the search process
 thresholds = Float32.(exp10.(-6:0.1:1))
@@ -258,9 +261,8 @@ println(result(Ψ_direct))
 
 prob = ODEProblem(Ψ_direct, u0[2:4], tspan2, Ψ_direct.parameters)
 sol_Ψ_direct = solve(prob)
+scatter(X_ext[2:4,:]')
 plot!(sol_Ψ_direct)
-
-
 
 
 problem_ideal = ContinuousDataDrivenProblem(X_ext[2:4,:],DX_ext[2:4,:])
@@ -271,6 +273,7 @@ println(result(Ψ_ideal))
 
 prob = ODEProblem(Ψ_ideal, u0[2:4], tspan2, Ψ_ideal.parameters)
 sol_Ψ_ideal = solve(prob)
+scatter(X_ext[2:4,:]')
 plot!(sol_Ψ_ideal)
 
 
@@ -278,8 +281,6 @@ plot!(sol_Ψ_ideal)
 problem_ideal_L = ContinuousDataDrivenProblem(X_ext[2:4,:], L_ext[:])
 Ψ_ideal_L = solve(problem_ideal_L, basis, opt, maxiter = 50000, progress = true, denoise = true, normalize = true)
 println(result(Ψ_ideal_L))
-
-
 
 
 
@@ -318,4 +319,4 @@ plot!(p_uodesindy,a_solution, lw = 5, vars=[2,3,4], label=["Estimated Exposed" "
 plot!(p_uodesindy,[20.99,21.01],[0.0,maximum(hcat(Array(solution_extrapolate[2:4,:]),Array(_sol_uode[2:4,:])))],lw=5,color=:black,label="Training Data End")
 
 savefig("universalodesindy_extrapolation.png")
-savefig("universalodesindy_extrapolation.pdf")
+# savefig("universalodesindy_extrapolation.pdf")
