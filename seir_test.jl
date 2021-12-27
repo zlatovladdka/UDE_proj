@@ -43,9 +43,8 @@ scatter(solution_extrapolate[1:1, :]', label="Susceptible")
 scatter!(solution_extrapolate[5:end, :]', label=["Population" "Severe cases" "Cumulative cases"])
 savefig("repos\\UDE_proj\\pres\\initial2.png")
 
-# Ideal data
+# данные
 tsdata = Array(solution)
-# Add noise to the data
 noisy_data = tsdata + Float32(1e-5)*randn(eltype(tsdata), size(tsdata))
 
 tsdata_extrapolate = Array(solution_extrapolate)
@@ -108,7 +107,6 @@ plot!(s, vars=[2,3,4], label=["NODE: Exposed" "NODE: Infected" "NODE: Recovered"
 
 savefig("repos\\UDE_proj\\pres\\neuralode_train.png")
 
-# Plot the losses
 plot(losses, yaxis = :log, xaxis = :log, xlabel = "Итерации", ylabel = "Потери")
 savefig("repos\\UDE_proj\\pres\\neuralode_loss.png")
 
@@ -119,10 +117,9 @@ plot!(p_node,_sol_node, lw=5, vars=[2,3,4], label=["NODE: Exposed" "NODE: Infect
 plot!(p_node,[20.99,21.01],[0.0,maximum(hcat(Array(solution_extrapolate[2:4,:]),Array(_sol_node[2:4,:])))],lw=5,color=:black,label="Граница тренировочных данных")
 
 savefig("repos\\UDE_proj\\pres\\neuralode_extrapolation.png")
-# savefig("neuralode_extrapolation.pdf")
 
 
-### Universal ODE Part 1
+### UODE
 
 ann = FastChain(FastDense(3, 64, tanh),FastDense(64, 64, tanh), FastDense(64, 1))
 p = Float64.(initial_params(ann))
@@ -184,13 +181,12 @@ scatter(solution, vars=[2,3,4], label="Данные")
 plot!(uode_sol, vars=[2,3,4], label="Предсказание UODE")
 
 savefig("repos\\UDE_proj\\pres\\uode_prediction_train.png")
-# savefig("uode_prediction_train.pdf")
 
 plot(losses, yaxis = :log, xaxis = :log, xlabel = "Итерации", ylabel = "Потери")
 savefig("repos\\UDE_proj\\pres\\uode_loss.png")
-# Collect the state trajectory and the derivatives
+
+
 X = noisy_data
-# Ideal derivatives
 DX = Array(solution(solution.t, Val{1}))
 
 prob_nn2 = ODEProblem(dudt_,u0, tspan2, res2_uode.minimizer)
@@ -200,26 +196,20 @@ plot!(p_uode,_sol_uode, lw = 5, vars=[2,3,4], label=["UODE: Exposed" "UODE: Infe
 plot!(p_uode,[20.99,21.01],[0.0,maximum(hcat(Array(solution_extrapolate[2:4,:]),Array(_sol_uode[2:4,:])))],lw=5,color=:black,label="Граница тренировочных данных")
 
 savefig("repos\\UDE_proj\\pres\\universalode_extrapolation.png")
-# savefig("universalode_extrapolation.pdf")
 
-### Universal ODE Part 2: SInDy to Equations
+### UODE + SINDy
 
-# Create a Basis
 @variables u[1:3]
-# Lots of polynomials
 polys = []
 for i ∈ 0:2, j ∈ 0:2, k ∈ 0:2
     push!(polys, u[1]^i * u[2]^j * u[3]^k)
 end
 
 polys
-
-# And some other stuff
 h = [cos.(u)...; sin.(u)...; unique(polys)...]
 basis = Basis(h, u)
 
 X = noisy_data
-# Ideal derivatives
 DX = Array(solution(solution.t, Val{1}))
 S,E,i,R,N,D,C = eachrow(X)
 F,β0,α,κ,μ,_,γ,d,λ = p_
@@ -244,10 +234,7 @@ savefig("repos\\UDE_proj\\pres\\uode_estimated_exposure.png")
 
 #### NOTE: реализовать то, что находится ниже, у меня пока что не удалось до конца
 
-# Create the thresholds which should be used in the search process
 thresholds = Float32.(exp10.(-6:0.1:1))
-
-# Create an optimizer for the SINDY problem
 opt = STLSQ(thresholds)
 
 
@@ -256,8 +243,6 @@ opt = STLSQ(thresholds)
 # возможно придётся добавить функции для выполнения СИНДи, а то че-то
 # местные не робят....
 
-
-## смотри в hudson_bay.jl за новым использованием СИНДи
 
 problem_direct = ContinuousDataDrivenProblem(X[2:4, :],DX[2:4, :])
 Ψ_direct = solve(problem_direct, basis, opt, maxiter = 50000, progress = true, denoise = true, normalize = true)
@@ -300,7 +285,7 @@ println(result(Ψ))
 Ψ(u0[2:4])
 
 
-## Build a ODE for the estimated system
+## финал
 function approx(u,p,t)
     S,E,i,R,N,D,C = u
     F,β0,α,κ,μ,σ,γ,d,λ = p
@@ -320,9 +305,6 @@ end
 a_prob = ODEProblem{false}(approx, u0, tspan2, p_)
 a_solution = solve(a_prob, Tsit5())
 
-p_uodesindy = scatter(solution_extrapolate, vars=[2,3,4], legend = :topleft, label=["True Exposed" "True Infected" "True Recovered"])
-plot!(p_uodesindy,a_solution, lw = 5, vars=[2,3,4], label=["Estimated Exposed" "Estimated Infected" "Estimated Recovered"])
-plot!(p_uodesindy,[20.99,21.01],[0.0,maximum(hcat(Array(solution_extrapolate[2:4,:]),Array(_sol_uode[2:4,:])))],lw=5,color=:black,label="Training Data End")
-
-savefig("universalodesindy_extrapolation.png")
-# savefig("universalodesindy_extrapolation.pdf")
+# p_uodesindy = scatter(solution_extrapolate, vars=[2,3,4], legend = :topleft, label=["True Exposed" "True Infected" "True Recovered"])
+# plot!(p_uodesindy,a_solution, lw = 5, vars=[2,3,4], label=["Estimated Exposed" "Estimated Infected" "Estimated Recovered"])
+# plot!(p_uodesindy,[20.99,21.01],[0.0,maximum(hcat(Array(solution_extrapolate[2:4,:]),Array(_sol_uode[2:4,:])))],lw=5,color=:black,label="Training Data End")

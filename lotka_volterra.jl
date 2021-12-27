@@ -9,7 +9,6 @@ using JLD2, FileIO
 using Statistics
 using DelimitedFiles
 using DifferentialEquations
-# Set a random seed for reproduceable behaviour
 using Random
 Random.seed!(5443)
 
@@ -107,7 +106,7 @@ end
 losses = Float32[]
 
 callback(θ,args...) = begin
-	l = loss(θ) # Equivalent L2 loss
+	l = loss(θ)
     push!(losses, l)
     if length(losses)%5==0
         println("Current loss after $(length(losses)) iterations: $(losses[end])")
@@ -186,8 +185,6 @@ estimate = solve(estimation_prob, Tsit5(), saveat = t)
 
 plot(estimate)
 
-
-##
 
 prob = ODEProblem(recovered_dynamics!, Xₙ[:, 1], tspan, p_model)
 sol_d = solve(prob,p=p_model)
