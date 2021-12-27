@@ -36,7 +36,12 @@ scatter(solution)
 tspan2 = (0.0,60.0)
 prob = ODEProblem(corona!, u0, tspan2, p_)
 solution_extrapolate = solve(prob, Vern7(), abstol=1e-12, reltol=1e-12, saveat = 1)
-scatter!(solution_extrapolate)
+scatter(solution_extrapolate[2:4, :]', label=["Exposed" "Infected" "Removed"])
+savefig("repos\\UDE_proj\\pres\\initial1.png")
+
+scatter(solution_extrapolate[1:1, :]', label="Susceptible")
+scatter!(solution_extrapolate[5:end, :]', label=["Population" "Severe cases" "Cumulative cases"])
+savefig("repos\\UDE_proj\\pres\\initial2.png")
 
 # Ideal data
 tsdata = Array(solution)
@@ -82,7 +87,7 @@ end
 
 loss(p)
 
-const losses = []
+losses = []
 callback(θ,l,pred) = begin
     push!(losses, l)
     if length(losses)%50==0
@@ -98,16 +103,19 @@ losses
 
 prob_node2 = ODEProblem(dudt_node, u0, tspan, res2_node.minimizer)
 s = solve(prob_node2, Tsit5(), saveat = 1)
-scatter(solution, vars=[2,3,4], label=["True Exposed" "True Infected" "True Recovered"])
-plot!(s, vars=[2,3,4], label=["Estimated Exposed" "Estimated Infected" "Estimated Recovered"])
+scatter(solution, vars=[2,3,4], label=["Данные: Exposed" "Данные: Infected" "Данные: Recovered"])
+plot!(s, vars=[2,3,4], label=["NODE: Exposed" "NODE: Infected" "NODE: Recovered"])
+
+savefig("repos\\UDE_proj\\pres\\neuralode_train.png")
 
 # Plot the losses
-plot(losses, yaxis = :log, xaxis = :log, xlabel = "Iterations", ylabel = "Loss")
+plot(losses, yaxis = :log, xaxis = :log, xlabel = "Итерации", ylabel = "Потери")
+savefig("repos\\UDE_proj\\pres\\neuralode_loss.png")
 
 prob_node_extrapolate = ODEProblem(dudt_node,u0, tspan2, res2_node.minimizer)
 _sol_node = solve(prob_node_extrapolate, Vern7(), abstol=1e-12, reltol=1e-12, saveat = 1)
 p_node = scatter(solution_extrapolate, vars=[2,3,4], legend = :topleft, label=["Данные: Exposed" "Данные: Infected" "Данные: Recovered"], title="Экстраполяция Neural ODE")
-plot!(p_node,_sol_node, lw=5, vars=[2,3,4], label=["Нейронная сеть: Exposed" "Нейронная сеть: Infected" "Нейронная сеть: Recovered"])
+plot!(p_node,_sol_node, lw=5, vars=[2,3,4], label=["NODE: Exposed" "NODE: Infected" "NODE: Recovered"])
 plot!(p_node,[20.99,21.01],[0.0,maximum(hcat(Array(solution_extrapolate[2:4,:]),Array(_sol_node[2:4,:])))],lw=5,color=:black,label="Граница тренировочных данных")
 
 savefig("repos\\UDE_proj\\pres\\neuralode_extrapolation.png")
@@ -154,7 +162,7 @@ end
 
 loss(p)
 
-const losses = []
+losses = []
 callback(θ,l,pred) = begin
     push!(losses, l)
     if length(losses)%50==0

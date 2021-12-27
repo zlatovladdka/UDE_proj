@@ -1,11 +1,11 @@
 \babel@toc {russian}{}
 \beamer@sectionintoc {1}{Подходы к описанию мира}{7}{0}{1}
 \beamer@subsectionintoc {1}{1}{Физические модели}{8}{0}{1}
-\beamer@subsectionintoc {1}{2}{Машинное обучение}{9}{0}{1}
-\beamer@sectionintoc {2}{Комбинирование двух подходов}{10}{0}{2}
-\beamer@sectionintoc {3}{Универсальные дифференциальные уравнения}{12}{0}{3}
-\beamer@sectionintoc {4}{Вспомогательные инструменты}{14}{0}{4}
-\beamer@subsectionintoc {4}{1}{алгортим SINDy}{15}{0}{4}
-\beamer@sectionintoc {5}{Примеры применения UDE}{16}{0}{5}
-\beamer@subsectionintoc {5}{1}{Модифицированная модель SEIR}{18}{0}{5}
-\beamer@subsectionintoc {5}{2}{Модель Лотки-Вольтерра}{19}{0}{5}
+\beamer@subsectionintoc {1}{2}{Машинное обучение}{14}{0}{1}
+\beamer@sectionintoc {2}{Комбинирование двух подходов}{21}{0}{2}
+\beamer@sectionintoc {3}{Универсальные дифференциальные уравнения}{27}{0}{3}
+\beamer@sectionintoc {4}{Вспомогательные инструменты}{46}{0}{4}
+\beamer@subsectionintoc {4}{1}{алгортим SINDy}{47}{0}{4}
+\beamer@sectionintoc {5}{Примеры применения UDE}{51}{0}{5}
+\beamer@subsectionintoc {5}{1}{Модифицированная модель SEIR}{53}{0}{5}
+\beamer@subsectionintoc {5}{2}{Модель Лотки-Вольтерра}{60}{0}{5}

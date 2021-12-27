@@ -9,57 +9,93 @@
 \headcommand {\beamer@framepages {7}{7}}
 \headcommand {\beamer@subsectionpages {7}{7}}
 \headcommand {\beamer@subsectionentry {0}{1}{1}{8}{Физические модели}}
-\headcommand {\slideentry {1}{1}{1}{8/8}{Физические модели}{0}}
-\headcommand {\beamer@framepages {8}{8}}
-\headcommand {\beamer@subsectionpages {8}{8}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{9}{Машинное обучение}}
-\headcommand {\slideentry {1}{2}{1}{9/9}{Машинное обучение}{0}}
-\headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@sectionpages {7}{9}}
-\headcommand {\beamer@subsectionpages {9}{9}}
-\headcommand {\sectionentry {2}{Комбинирование двух подходов}{10}{Комбинирование двух подходов}{0}}
-\headcommand {\slideentry {2}{0}{1}{10/10}{}{0}}
-\headcommand {\beamer@framepages {10}{10}}
-\headcommand {\slideentry {2}{0}{2}{11/11}{}{0}}
-\headcommand {\beamer@framepages {11}{11}}
-\headcommand {\beamer@sectionpages {10}{11}}
-\headcommand {\beamer@subsectionpages {10}{11}}
-\headcommand {\sectionentry {3}{Универсальные дифференциальные уравнения}{12}{Универсальные дифференциальные уравнения}{0}}
-\headcommand {\slideentry {3}{0}{1}{12/12}{}{0}}
-\headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {3}{0}{2}{13/13}{}{0}}
-\headcommand {\beamer@framepages {13}{13}}
-\headcommand {\beamer@sectionpages {12}{13}}
-\headcommand {\beamer@subsectionpages {12}{13}}
-\headcommand {\sectionentry {4}{Вспомогательные инструменты}{14}{Вспомогательные инструменты}{0}}
-\headcommand {\slideentry {4}{0}{1}{14/14}{}{0}}
-\headcommand {\beamer@framepages {14}{14}}
-\headcommand {\beamer@subsectionpages {14}{14}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{15}{алгортим SINDy}}
-\headcommand {\slideentry {4}{1}{1}{15/15}{алгортим SINDy}{0}}
-\headcommand {\beamer@framepages {15}{15}}
-\headcommand {\beamer@sectionpages {14}{15}}
-\headcommand {\beamer@subsectionpages {15}{15}}
-\headcommand {\sectionentry {5}{Примеры применения UDE}{16}{Примеры применения UDE}{0}}
-\headcommand {\slideentry {5}{0}{1}{16/16}{}{0}}
-\headcommand {\beamer@framepages {16}{16}}
-\headcommand {\slideentry {5}{0}{2}{17/17}{}{0}}
-\headcommand {\beamer@framepages {17}{17}}
-\headcommand {\beamer@subsectionpages {16}{17}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{18}{Модифицированная модель SEIR}}
-\headcommand {\slideentry {5}{1}{1}{18/18}{Модифицированная модель SEIR}{0}}
-\headcommand {\beamer@framepages {18}{18}}
-\headcommand {\beamer@subsectionpages {18}{18}}
-\headcommand {\beamer@subsectionentry {0}{5}{2}{19}{Модель Лотки-Вольтерра}}
-\headcommand {\slideentry {5}{2}{1}{19/19}{Модель Лотки-Вольтерра}{0}}
-\headcommand {\beamer@framepages {19}{19}}
-\headcommand {\beamer@sectionpages {16}{19}}
-\headcommand {\beamer@subsectionpages {19}{19}}
-\headcommand {\sectionentry {6}{Литература}{20}{Литература}{0}}
-\headcommand {\slideentry {6}{0}{1}{20/20}{}{0}}
-\headcommand {\beamer@framepages {20}{20}}
-\headcommand {\beamer@partpages {1}{20}}
-\headcommand {\beamer@subsectionpages {20}{20}}
-\headcommand {\beamer@sectionpages {20}{20}}
-\headcommand {\beamer@documentpages {20}}
-\headcommand {\gdef \inserttotalframenumber {16}}
+\headcommand {\slideentry {1}{1}{1}{8/13}{Физические модели}{0}}
+\headcommand {\beamer@framepages {8}{13}}
+\headcommand {\beamer@subsectionpages {8}{13}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{14}{Машинное обучение}}
+\headcommand {\slideentry {1}{2}{1}{14/20}{Машинное обучение}{0}}
+\headcommand {\beamer@framepages {14}{20}}
+\headcommand {\beamer@sectionpages {7}{20}}
+\headcommand {\beamer@subsectionpages {14}{20}}
+\headcommand {\sectionentry {2}{Комбинирование двух подходов}{21}{Комбинирование двух подходов}{0}}
+\headcommand {\slideentry {2}{0}{1}{21/21}{}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {2}{0}{2}{22/25}{}{0}}
+\headcommand {\beamer@framepages {22}{25}}
+\headcommand {\slideentry {2}{0}{3}{26/26}{}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\beamer@sectionpages {21}{26}}
+\headcommand {\beamer@subsectionpages {21}{26}}
+\headcommand {\sectionentry {3}{Универсальные дифференциальные уравнения}{27}{Универсальные дифференциальные уравнения}{0}}
+\headcommand {\slideentry {3}{0}{1}{27/27}{}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\slideentry {3}{0}{2}{28/29}{}{0}}
+\headcommand {\beamer@framepages {28}{29}}
+\headcommand {\slideentry {3}{0}{3}{30/32}{}{0}}
+\headcommand {\beamer@framepages {30}{32}}
+\headcommand {\slideentry {3}{0}{4}{33/36}{}{0}}
+\headcommand {\beamer@framepages {33}{36}}
+\headcommand {\slideentry {3}{0}{5}{37/38}{}{0}}
+\headcommand {\beamer@framepages {37}{38}}
+\headcommand {\slideentry {3}{0}{6}{39/45}{}{0}}
+\headcommand {\beamer@framepages {39}{45}}
+\headcommand {\beamer@sectionpages {27}{45}}
+\headcommand {\beamer@subsectionpages {27}{45}}
+\headcommand {\sectionentry {4}{Вспомогательные инструменты}{46}{Вспомогательные инструменты}{0}}
+\headcommand {\slideentry {4}{0}{1}{46/46}{}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\beamer@subsectionpages {46}{46}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{47}{алгортим SINDy}}
+\headcommand {\slideentry {4}{1}{1}{47/49}{алгортим SINDy}{0}}
+\headcommand {\beamer@framepages {47}{49}}
+\headcommand {\slideentry {4}{1}{2}{50/50}{алгортим SINDy}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\beamer@sectionpages {46}{50}}
+\headcommand {\beamer@subsectionpages {47}{50}}
+\headcommand {\sectionentry {5}{Примеры применения UDE}{51}{Примеры применения UDE}{0}}
+\headcommand {\slideentry {5}{0}{1}{51/51}{}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\slideentry {5}{0}{2}{52/52}{}{0}}
+\headcommand {\beamer@framepages {52}{52}}
+\headcommand {\beamer@subsectionpages {51}{52}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{53}{Модифицированная модель SEIR}}
+\headcommand {\slideentry {5}{1}{1}{53/53}{Модифицированная модель SEIR}{0}}
+\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\slideentry {5}{1}{2}{54/54}{Модифицированная модель SEIR}{0}}
+\headcommand {\beamer@framepages {54}{54}}
+\headcommand {\slideentry {5}{1}{3}{55/55}{Модифицированная модель SEIR}{0}}
+\headcommand {\beamer@framepages {55}{55}}
+\headcommand {\slideentry {5}{1}{4}{56/56}{Модифицированная модель SEIR}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\slideentry {5}{1}{5}{57/57}{Модифицированная модель SEIR}{0}}
+\headcommand {\beamer@framepages {57}{57}}
+\headcommand {\slideentry {5}{1}{6}{58/58}{Модифицированная модель SEIR}{0}}
+\headcommand {\beamer@framepages {58}{58}}
+\headcommand {\slideentry {5}{1}{7}{59/59}{Модифицированная модель SEIR}{0}}
+\headcommand {\beamer@framepages {59}{59}}
+\headcommand {\beamer@subsectionpages {53}{59}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{60}{Модель Лотки-Вольтерра}}
+\headcommand {\slideentry {5}{2}{1}{60/60}{Модель Лотки-Вольтерра}{0}}
+\headcommand {\beamer@framepages {60}{60}}
+\headcommand {\slideentry {5}{2}{2}{61/61}{Модель Лотки-Вольтерра}{0}}
+\headcommand {\beamer@framepages {61}{61}}
+\headcommand {\slideentry {5}{2}{3}{62/62}{Модель Лотки-Вольтерра}{0}}
+\headcommand {\beamer@framepages {62}{62}}
+\headcommand {\slideentry {5}{2}{4}{63/63}{Модель Лотки-Вольтерра}{0}}
+\headcommand {\beamer@framepages {63}{63}}
+\headcommand {\slideentry {5}{2}{5}{64/64}{Модель Лотки-Вольтерра}{0}}
+\headcommand {\beamer@framepages {64}{64}}
+\headcommand {\slideentry {5}{2}{6}{65/65}{Модель Лотки-Вольтерра}{0}}
+\headcommand {\beamer@framepages {65}{65}}
+\headcommand {\slideentry {5}{2}{7}{66/66}{Модель Лотки-Вольтерра}{0}}
+\headcommand {\beamer@framepages {66}{66}}
+\headcommand {\beamer@sectionpages {51}{66}}
+\headcommand {\beamer@subsectionpages {60}{66}}
+\headcommand {\sectionentry {6}{Литература}{67}{Литература}{0}}
+\headcommand {\slideentry {6}{0}{1}{67/67}{}{0}}
+\headcommand {\beamer@framepages {67}{67}}
+\headcommand {\beamer@partpages {1}{67}}
+\headcommand {\beamer@subsectionpages {67}{67}}
+\headcommand {\beamer@sectionpages {67}{67}}
+\headcommand {\beamer@documentpages {67}}
+\headcommand {\gdef \inserttotalframenumber {34}}

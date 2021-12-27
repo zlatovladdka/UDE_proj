@@ -1,0 +1,18 @@
+\frametitle{Примеры применения UDE}
+				\framesubtitle{Модифицированная модель SEIR: Neural ODE}
+					\begin{columns}
+						\column{0.45\linewidth}
+						\begin{center}
+							Определим NODE:
+							\begin{displaymath}
+							\frac{d}{dt}X = \mathcal{NN}(X)
+							\end{displaymath}
+						\end{center}
+						\includegraphics[width=.9\columnwidth]{neuralode_loss.png}
+						\column{0.45\linewidth}
+						\begin{verbatim}
+							NN=FastChain(...)
+							loss=sum(abs2,data.-solve(prob))
+						\end{verbatim}
+						\includegraphics[width=.9\columnwidth]{neuralode_train.png}
+					\end{columns}

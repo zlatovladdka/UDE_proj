@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.8.26)  27 DEC 2021 02:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.8.26)  27 DEC 2021 12:56
 entering extended mode
 **./ude_proj.tex
 (ude_proj.tex
@@ -1410,99 +1410,356 @@ oc) [2
 
 ]
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-95.
+99.
  ("C:\Users\vladt\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmss.fd"
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
-5.
+9.
  ("C:\Users\vladt\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-95.
+99.
 
 ("C:\Users\vladt\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-95.
+99.
 
 ("C:\Users\vladt\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 95.
+(Font)              <10> on input line 99.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 95.
+(Font)              <7> on input line 99.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 95.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
+(Font)              <5> on input line 99.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 99.
 
 
 ("C:\Users\vladt\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
 
 ("C:\Users\vladt\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 95.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 99.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 95.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 99.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 95.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 99.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9
-5.
+9.
 ("C:\Users\vladt\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 95.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 99.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <7> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 95.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 99.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <5> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 95.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 99.
 
 [8
 
-]
-<alphago.png, id=207, 249.93375pt x 140.525pt>
-File: alphago.png Graphic file (type png)
-<use alphago.png>
-Package pdftex.def Info: alphago.png  used on input line 119.
-(pdftex.def)             Requested size: 172.09767pt x 96.76508pt.
-<mnist.png, id=209, 596.2275pt x 362.35374pt>
-File: mnist.png Graphic file (type png)
-<use mnist.png>
-Package pdftex.def Info: mnist.png  used on input line 119.
-(pdftex.def)             Requested size: 172.09767pt x 104.5878pt.
- [9
+] [9
 
- <./alphago.png> <./mnist.png>] (ude_proj.toc) [10
+] [10
 
 ] [11
 
-] (ude_proj.toc)
-[12
+] [12
 
 ] [13
 
-] (ude_proj.toc) [14
+]
+<alphago.png, id=239, 249.93375pt x 140.525pt>
+File: alphago.png Graphic file (type png)
+<use alphago.png>
+Package pdftex.def Info: alphago.png  used on input line 123.
+(pdftex.def)             Requested size: 172.09767pt x 96.76508pt.
+<mnist.png, id=241, 596.2275pt x 362.35374pt>
+File: mnist.png Graphic file (type png)
+<use mnist.png>
+Package pdftex.def Info: mnist.png  used on input line 123.
+(pdftex.def)             Requested size: 172.09767pt x 104.5878pt.
+ [14
 
-] [15
+ <./alphago.png> <./mnist.png>]
+File: alphago.png Graphic file (type png)
+<use alphago.png>
+Package pdftex.def Info: alphago.png  used on input line 123.
+(pdftex.def)             Requested size: 172.09767pt x 96.76508pt.
+File: mnist.png Graphic file (type png)
+<use mnist.png>
+Package pdftex.def Info: mnist.png  used on input line 123.
+(pdftex.def)             Requested size: 172.09767pt x 104.5878pt.
+ [15
 
-] (ude_proj.toc) [16
+]
+File: alphago.png Graphic file (type png)
+<use alphago.png>
+Package pdftex.def Info: alphago.png  used on input line 123.
+(pdftex.def)             Requested size: 172.09767pt x 96.76508pt.
+File: mnist.png Graphic file (type png)
+<use mnist.png>
+Package pdftex.def Info: mnist.png  used on input line 123.
+(pdftex.def)             Requested size: 172.09767pt x 104.5878pt.
+ [16
 
-] [17
+]
+File: alphago.png Graphic file (type png)
+<use alphago.png>
+Package pdftex.def Info: alphago.png  used on input line 123.
+(pdftex.def)             Requested size: 172.09767pt x 96.76508pt.
+File: mnist.png Graphic file (type png)
+<use mnist.png>
+Package pdftex.def Info: mnist.png  used on input line 123.
+(pdftex.def)             Requested size: 172.09767pt x 104.5878pt.
 
-] [18
+[17
 
-] [19
+]
+File: alphago.png Graphic file (type png)
+<use alphago.png>
+Package pdftex.def Info: alphago.png  used on input line 123.
+(pdftex.def)             Requested size: 172.09767pt x 96.76508pt.
+File: mnist.png Graphic file (type png)
+<use mnist.png>
+Package pdftex.def Info: mnist.png  used on input line 123.
+(pdftex.def)             Requested size: 172.09767pt x 104.5878pt.
+ [18
 
-] [20
+]
+File: alphago.png Graphic file (type png)
+<use alphago.png>
+Package pdftex.def Info: alphago.png  used on input line 123.
+(pdftex.def)             Requested size: 172.09767pt x 96.76508pt.
+File: mnist.png Graphic file (type png)
+<use mnist.png>
+Package pdftex.def Info: mnist.png  used on input line 123.
+(pdftex.def)             Requested size: 172.09767pt x 104.5878pt.
+ [19
+
+]
+File: alphago.png Graphic file (type png)
+<use alphago.png>
+Package pdftex.def Info: alphago.png  used on input line 123.
+(pdftex.def)             Requested size: 172.09767pt x 96.76508pt.
+File: mnist.png Graphic file (type png)
+<use mnist.png>
+Package pdftex.def Info: mnist.png  used on input line 123.
+(pdftex.def)             Requested size: 172.09767pt x 104.5878pt.
+ [20
+
+] (ude_proj.toc) [21
+
+] [22
+
+] [23
+
+] [24
+
+] [25
+
+]
+<cnn.png, id=378, 326.72063pt x 202.50656pt>
+File: cnn.png Graphic file (type png)
+<use cnn.png>
+Package pdftex.def Info: cnn.png  used on input line 180.
+(pdftex.def)             Requested size: 154.88686pt x 96.00002pt.
+ [26
+
+ <./cnn.png>]
+(ude_proj.toc) [27
+
+] [28
+
+] [29
+
+] [30
+
+] [31
+
+] [32
+
+] [33
+
+] [34
+
+] [35
+
+] [36
+
+] [37
+
+] [38
+
+]
+[39
+
+] [40
+
+] [41
+
+] [42
+
+] [43
+
+] [44
+
+] [45
+
+] (ude_proj.toc) [46
+
+] [47
+
+] [48
+
+] [49
+
+]
+<sindy.jpg, id=619, 308.352pt x 192.72pt>
+File: sindy.jpg Graphic file (type jpg)
+<use sindy.jpg>
+Package pdftex.def Info: sindy.jpg  used on input line 300.
+(pdftex.def)             Requested size: 344.19536pt x 215.12444pt.
+ [50
+
+ <./sindy.jpg>] (ude_proj.toc) [51
+
+] [52
+
+] [53
+
+]
+<initial1.png, id=652, 602.25pt x 401.5pt>
+File: initial1.png Graphic file (type png)
+<use initial1.png>
+Package pdftex.def Info: initial1.png  used on input line 365.
+(pdftex.def)             Requested size: 137.67604pt x 91.78555pt.
+<initial2.png, id=653, 602.25pt x 401.5pt>
+File: initial2.png Graphic file (type png)
+<use initial2.png>
+Package pdftex.def Info: initial2.png  used on input line 365.
+(pdftex.def)             Requested size: 137.67604pt x 91.78555pt.
+ [54
+
+ <./initial1.png> <./initial2.png>]
+\openout4 = `ude_proj.vrb'.
+
+
+(ude_proj.vrb
+<neuralode_loss.png, id=661, 602.25pt x 401.5pt>
+File: neuralode_loss.png Graphic file (type png)
+<use neuralode_loss.png>
+Package pdftex.def Info: neuralode_loss.png  used on input line 11.
+(pdftex.def)             Requested size: 139.39722pt x 92.93118pt.
+LaTeX Font Info:    Trying to load font information for T2A+lmtt on input line 
+13.
+LaTeX Font Info:    No file T2Almtt.fd. on input line 13.
+
+
+LaTeX Font Warning: Font shape `T2A/lmtt/m/n' undefined
+(Font)              using `T2A/cmr/m/n' instead on input line 13.
+
+<neuralode_train.png, id=662, 602.25pt x 401.5pt>
+File: neuralode_train.png Graphic file (type png)
+<use neuralode_train.png>
+Package pdftex.def Info: neuralode_train.png  used on input line 17.
+(pdftex.def)             Requested size: 139.39722pt x 92.93118pt.
+) [55
+
+ <./neuralode_loss.png> <./neuralode_train.png>]
+<neuralode_extrapolation.png, id=670, 602.25pt x 401.5pt>
+File: neuralode_extrapolation.png Graphic file (type png)
+<use neuralode_extrapolation.png>
+Package pdftex.def Info: neuralode_extrapolation.png  used on input line 394.
+(pdftex.def)             Requested size: 275.35733pt x 183.57722pt.
+ [56
+
+ <./neuralode_extrapolation.png>] [57
+
+]
+<uode_loss.png, id=683, 602.25pt x 401.5pt>
+File: uode_loss.png Graphic file (type png)
+<use uode_loss.png>
+Package pdftex.def Info: uode_loss.png  used on input line 434.
+(pdftex.def)             Requested size: 154.88686pt x 103.26027pt.
+<uode_prediction_train.png, id=684, 602.25pt x 401.5pt>
+File: uode_prediction_train.png Graphic file (type png)
+<use uode_prediction_train.png>
+Package pdftex.def Info: uode_prediction_train.png  used on input line 434.
+(pdftex.def)             Requested size: 154.88686pt x 103.26027pt.
+ [58
+
+ <./uode_loss.png> <./uode_prediction_train.png>]
+<uode_estimated_exposure.png, id=691, 602.25pt x 401.5pt>
+File: uode_estimated_exposure.png Graphic file (type png)
+<use uode_estimated_exposure.png>
+Package pdftex.def Info: uode_estimated_exposure.png  used on input line 454.
+(pdftex.def)             Requested size: 154.88686pt x 103.26027pt.
+<universalode_extrapolation.png, id=692, 602.25pt x 401.5pt>
+File: universalode_extrapolation.png Graphic file (type png)
+<use universalode_extrapolation.png>
+Package pdftex.def Info: universalode_extrapolation.png  used on input line 454
+.
+(pdftex.def)             Requested size: 154.88686pt x 103.26027pt.
+ [59
+
+ <./uode_estimated_exposure.png> <./universalode_extrapolation.png>] [60
+
+]
+<data.png, id=704, 602.25pt x 401.5pt>
+File: data.png Graphic file (type png)
+<use data.png>
+Package pdftex.def Info: data.png  used on input line 489.
+(pdftex.def)             Requested size: 240.9357pt x 160.62164pt.
+ [61
+
+ <./data.png>]
+<sindy_solo.png, id=712, 602.25pt x 401.5pt>
+File: sindy_solo.png Graphic file (type png)
+<use sindy_solo.png>
+Package pdftex.def Info: sindy_solo.png  used on input line 498.
+(pdftex.def)             Requested size: 240.9357pt x 160.62164pt.
+ [62
+
+ <./sindy_solo.png>]
+<ude_missing_term_predict_lotka_new.png, id=719, 602.25pt x 401.5pt>
+File: ude_missing_term_predict_lotka_new.png Graphic file (type png)
+<use ude_missing_term_predict_lotka_new.png>
+Package pdftex.def Info: ude_missing_term_predict_lotka_new.png  used on input 
+line 507.
+(pdftex.def)             Requested size: 275.35733pt x 183.57722pt.
+ [63
+
+ <./ude_missing_term_predict_lotka_new.png>]
+[64
+
+]
+<recover_fit.png, id=732, 602.25pt x 401.5pt>
+File: recover_fit.png Graphic file (type png)
+<use recover_fit.png>
+Package pdftex.def Info: recover_fit.png  used on input line 532.
+(pdftex.def)             Requested size: 240.9357pt x 160.62164pt.
+ [65
+
+ <./recover_fit.png>]
+<full_lotka.png, id=739, 602.25pt x 401.5pt>
+File: full_lotka.png Graphic file (type png)
+<use full_lotka.png>
+Package pdftex.def Info: full_lotka.png  used on input line 541.
+(pdftex.def)             Requested size: 240.9357pt x 160.62164pt.
+ [66
+
+ <./full_lotka.png>] [67
 
 ]
 \tf@nav=\write6
@@ -1514,44 +1771,47 @@ Package pdftex.def Info: mnist.png  used on input line 119.
 \tf@snm=\write8
 \openout8 = `ude_proj.snm'.
 
-
-(ude_proj.aux)
+ (ude_proj.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `ude_proj.out' has not changed.
-(rerunfilecheck)             Checksum: 029C7312ED5770222F21E682426F9FA5;2493.
+(rerunfilecheck)             Checksum: 4CFA0F1ECC8A3BF74D2E46A233C8A65A;2494.
  ) 
 Here is how much of TeX's memory you used:
- 22558 strings out of 479616
- 417769 string characters out of 2863065
- 698334 words of memory out of 3000000
- 39124 multiletter control sequences out of 15000+200000
- 456884 words of font info for 69 fonts, out of 3000000 for 9000
+ 22862 strings out of 479616
+ 423153 string characters out of 2863065
+ 699728 words of memory out of 3000000
+ 39311 multiletter control sequences out of 15000+200000
+ 457687 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 131i,15n,132p,415b,761s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
-c} <C:\Users\vladt\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\la
-rm1200.pk>{C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/
-lm-mathex.enc}{C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
-/lm/lm-mathsy.enc}{C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/d
-vips/lm/lm-rm.enc}{C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/d
-vips/lm/lm-mathit.enc} <C:\Users\vladt\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
-/lh/lh-t2a/dpi600\larm0800.pk> <C:\Users\vladt\AppData\Local\MiKTeX\2.9\fonts/p
-k/ljfour/lh/lh-t2a/dpi600\larm0500.pk> <C:\Users\vladt\AppData\Local\MiKTeX\2.9
-\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0700.pk> <C:\Users\vladt\AppData\Local\Mi
-KTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\vladt\AppData\
-Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk><C:/Users/vladt/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Users/vla
-dt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Users
-/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/U
-sers/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb>
-<C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso8.
-pfb><C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lms
-y10.pfb>
-Output written on ude_proj.pdf (20 pages, 271235 bytes).
+ 131i,15n,132p,469b,761s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\vladt\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\la
+rm0900.pk>{C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/
+lm-mathit.enc}{C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
+/lm/lm-ec.enc} <C:\Users\vladt\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t
+2a/dpi600\larm1200.pk>{C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/e
+nc/dvips/lm/lm-mathsy.enc}{C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/enc/dvips/lm/lm-mathex.enc}{C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9
+/fonts/enc/dvips/lm/lm-rm.enc} <C:\Users\vladt\AppData\Local\MiKTeX\2.9\fonts/p
+k/ljfour/lh/lh-t2a/dpi600\larm0800.pk> <C:\Users\vladt\AppData\Local\MiKTeX\2.9
+\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0500.pk> <C:\Users\vladt\AppData\Local\Mi
+KTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0700.pk> <C:\Users\vladt\AppData\
+Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:\Users\vladt\
+AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1440.pk><C:/Users
+/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/U
+sers/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><
+C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pf
+b><C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss1
+0.pfb><C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
+mss8.pfb><C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/l
+m/lmsso10.pfb><C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmsso8.pfb><C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/lm/lmsy10.pfb><C:/Users/vladt/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmsy7.pfb>
+Output written on ude_proj.pdf (67 pages, 1143455 bytes).
 PDF statistics:
- 592 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
- 243 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1175 PDF objects out of 1200 (max. 8388607)
+ 146 named destinations out of 1000 (max. 500000)
+ 647 words of extra memory for PDF output out of 10000 (max. 10000000)
 
