@@ -242,8 +242,6 @@ savefig("repos\\UDE_proj\\pres\\uode_estimated_exposure.png")
 # savefig("uode_estimated_exposure.pdf")
 
 
-
-
 #### NOTE: реализовать то, что находится ниже, у меня пока что не удалось до конца
 
 # Create the thresholds which should be used in the search process
